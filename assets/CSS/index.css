@@ -1,0 +1,568 @@
+@font-face {
+    font-family: Zpix;
+    src: url("../font/zpix.eot") format("embedded-opentype"),
+        url("../font/zpix.ttf") format("truetype"),
+        url("../font/zpix.woff") format("woff");
+}
+
+#wrapper {
+    display: block;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    flex: none;
+    justify-content: center;
+}
+
+#slide {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    width: 100%;
+
+}
+
+#slide ul {
+    position: absolute;
+    width: 3000px;
+    padding-left: 50px;
+}
+
+#slide li {
+    float: left;
+    width: 1000px;
+    list-style-type: none;
+}
+
+button {
+    opacity: .6;
+    transition: opacity .2s;
+    border: none;
+    background: none;
+    z-index: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+#prevBtn {
+    position: absolute;
+    top: 125px;
+    left: 20px;
+}
+
+#nextBtn {
+    position: absolute;
+    top: 125px;
+    right: 20px;
+}
+
+html,
+body,
+main {
+
+    height: auto;
+}
+
+body {
+    background-image: url("../IMG/main_bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: Zpix;
+}
+
+main {
+    color: white;
+    margin: 0 auto;
+    background-color: rgba(70, 70, 70, 0.5);
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.logo {
+    width: 201px;
+    height: 74px;
+    margin: 10px;
+    padding: 5px 100px 5px 100px;
+    border: 3px #b3eafe solid;
+    border-radius: 40px;
+    position: relative;
+}
+
+.logo.block {
+    padding: 0px;
+    width: 100%;
+    border: none;
+    height: auto;
+    margin: 0px;
+    min-height: 100px;
+}
+
+.logo.arceus {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0;
+    border: none;
+}
+
+.logo.small {
+    border: none;
+    width: 30%;
+    height: auto;
+    position: absolute;
+    z-index: 5;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.logo.small.go {
+    top: 30%;
+    width: 20%;
+}
+
+.logo.small.go.l {
+    width: 25%;
+    left: 30%;
+}
+
+.logo.small.go.r {
+    left: 65%;
+}
+
+.logo.small.brilliant {
+    top: 30%;
+}
+
+.logo.small.pearl {
+    top: 60%;
+}
+
+.logo.border {
+    border: none;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    padding: 0px;
+    margin: 0px;
+    left: 0;
+}
+
+.news {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 150px;
+    height: 85%;
+}
+
+.block_left {
+    width: 47.5%;
+    float: left;
+    margin: 10px;
+}
+
+.block_right {
+    width: 47.5%;
+    float: right;
+    margin: 10px;
+}
+
+.block_left.green {
+    background-color: #4dad5b;
+    border-radius: 10px;
+    width: 47.5%;
+    height: auto;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.block_left.green:hover {
+    background-color: rgb(54, 145, 67);
+    transform: matrix(1, 0, 0, 1, 0, -5);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+.block_right.purple {
+    background-color: #734bb2;
+    border-radius: 10px;
+    width: 47.5%;
+    height: auto;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+
+}
+
+.block_right.purple:hover {
+    background-color: rgb(85, 26, 139);
+    transform: matrix(1, 0, 0, 1, 0, -5);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+
+.gif {
+    height: auto;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    margin: 0;
+    padding: 0;
+    border-bottom: white 3px solid;
+}
+
+.img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    margin: 0;
+    padding: 0;
+    border-bottom: white 3px solid;
+}
+
+.text {
+    margin: 10px;
+    padding: 0px;
+    line-height: 1.2em;
+}
+
+.topic_title {
+    margin: 10px 0px;
+}
+
+.more {
+    color: gainsboro;
+}
+
+.block_left.lightblue {
+    background-color: #30a7d7;
+    border-radius: 10px;
+    width: 47.5%;
+    height: auto;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.block_left.lightblue:hover {
+    background-color: rgb(27, 130, 177);
+    transform: matrix(1, 0, 0, 1, 0, -5);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+.block_right.brown {
+    background-color: #C7AA79;
+    border-radius: 10px;
+    width: 47.5%;
+    height: auto;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.block_right.brown:hover {
+    background-color: rgb(184, 147, 85);
+    ;
+    transform: matrix(1, 0, 0, 1, 0, -5);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+.block_right.yellow {
+    background-color: #e6bc2f;
+    border-radius: 10px;
+    width: 47.5%;
+    height: auto;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.block_right.yellow:hover {
+    background-color: rgb(218, 163, 28);
+    transform: matrix(1, 0, 0, 1, 0, -5);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+
+.block_left.red {
+    background-color: rgb(227, 53, 13);
+    border-radius: 10px;
+    width: 47.5%;
+    height: auto;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.block_left.red:hover {
+    background-color: #b32a0a;
+    transform: matrix(1, 0, 0, 1, 0, -5);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+.block_left.pink {
+    background-color: #ff90c4;
+    border-radius: 10px;
+    width: 47.5%;
+    height: auto;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.block_left.pink:hover {
+    background-color: rgb(255, 42, 142);
+    transform: matrix(1, 0, 0, 1, 0, -5);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+.block_right.orange {
+    background-color: #ee6b2f;
+    border-radius: 10px;
+    width: 47.5%;
+    height: auto;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.block_right.orange:hover {
+    background-color: rgb(218, 71, 27);
+    transform: matrix(1, 0, 0, 1, 0, -5);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+.block_left.lightpurple {
+    background-color: #B38AEA;
+    border-radius: 10px;
+    width: 47.5%;
+    height: auto;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.block_left.lightpurple:hover {
+    background-color: rgb(151, 95, 226);
+    transform: matrix(1, 0, 0, 1, 0, -5);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+.block_right.gray {
+    background-color: #a4a4a4;
+    border-radius: 10px;
+    width: 47.5%;
+    height: auto;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.block_right.gray:hover {
+    background-color: rgb(139, 139, 139);
+    transform: matrix(1, 0, 0, 1, 0, -5);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+.main.arceus {
+    background: url("../IMG/arceus_bg.jpg") repeat top left;
+}
+
+.main.diamond {
+    background: url("../img/bg_diamond_l.png"), url("../IMG/bg_perl_r.png"), white;
+    background-repeat: repeat-y, repeat-y;
+    background-position: left top, right top;
+}
+
+.introduce {
+    width: 100%;
+    position: relative;
+    color: black;
+    padding: 10px;
+    margin: 15px;
+}
+
+.introduce.go {
+    color: white;
+}
+
+.introduce.unite {
+    z-index: 2;
+    top: -50px;
+}
+
+.introduce.unite.special {
+    transform: skewY(11.6deg);
+    margin: 0px;
+    top: 350px;
+    z-index: 1;
+    background-color: white;
+    position: absolute;
+    overflow: hidden;
+    transform-origin: left top;
+    width: 100%;
+}
+
+.introduce.unite.special::before {
+    transform: skewY(-11.6deg);
+    position: relative;
+    height: 1400px;
+    width: 100%;
+    content: "";
+    display: block;
+    background: url("../IMG/bg-pattern_01.png");
+    position: relative;
+    background-position: left top;
+}
+
+.introduce.unite.special::after {
+    content: '';
+    display: block;
+    background: url("../IMG/unite_footer.jpeg") no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: left bottom;
+    z-index: 1;
+}
+
+.introduce.unite table {
+
+    margin-top: 100px;
+
+}
+
+.introduce.arceus {
+    background: url("../IMG/arceus_bg.jpg") repeat top left;
+    background-size: contain;
+}
+
+.text.arceus {
+    font-size: 20px;
+}
+
+.text.arceus .title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+table {
+    border: none;
+}
+
+.underline {
+    background: url(../img/line-bg.png) bottom;
+    background-repeat: repeat-x;
+
+}
+
+.underline td {
+    padding-bottom: 34px;
+}
+
+.cut.img {
+    width: 100%;
+    overflow: hidden;
+    margin: 15px;
+    position: relative;
+}
+
+.logo.diamond {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -300px;
+    border: none;
+    border-radius: 20px;
+}
+
+.logo.block.unite::before,
+.cut.img::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 300px;
+    z-index: 5;
+    background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.underline_diamond td {
+    background-image: linear-gradient(to right, #0078c4 0%, #614db7 50%, #a61e41 100%);
+    height: 2px;
+    z-index: 5;
+    border-radius: 50%;
+}
+
+.underline_sword td {
+    background-image: linear-gradient(90deg, #cc1450 45%, white 50%, #00a0e9 55%);
+    height: 2px;
+    z-index: 5;
+}
+
+.main.sword {
+    background: url("../img/bg-sword.png") no-repeat;
+    background-attachment: fixed;
+}
+
+.main.go {
+    background: url("../img/bg_go.jpg");
+}
+
+.underline_go td {
+    mask: url(https://lh3.googleusercontent.com/gDxqeL5uAfRqwGbe9Ug_hp6BdWH5Qx_RzvFQ_vGLqAPHi6D0YPSZG5GgkzsH5RHqWGwZGRWG2LHFv_anIPKE6k5Q5FvBaT7Ep2Ut3ryceDMhUJY=s200) center/contain;
+    mask-repeat: space;
+    background-color: white;
+    height: 48px;
+    z-index: 5;
+}
+
+.main.letgo {
+    background: url("../img/bg_letgo.jpg") no-repeat;
+    background-attachment: fixed;
+}
+
+.underline_letsgo td {
+    background-image: linear-gradient(90deg, rgb(169, 123, 36) 45%, green 50%, rgb(207, 207, 13) 55%);
+    height: 2px;
+    z-index: 5;
+    border-radius: 50%;
+}
+
+.main.cafe {
+    background: url("../img/cafe_bg.webp");
+}
+
+.underline_cafe td {
+    background-image: url("../img/cafe_underline.png");
+    height: 40px;
+    z-index: 5;
+}
+
+.main.master{
+    background: url("../img/master_bg.png");
+}
+
+.underline_master td {
+    background-image: url("../img/master_underline.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20px;
+    z-index: 5;
+}
+
+.home{
+    background-color: white;
+    border-radius: 50%;
+    background-size: 130px 130px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 500;
+    width: 130px;
+    height: 130px;
+}
